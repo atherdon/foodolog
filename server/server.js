@@ -3,6 +3,9 @@
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 
+const Raven = require('raven');
+Raven.config('https://6c8ba2737aae4d81908677e4dba9be3f:26c83aa1a38a42cdbf0beea41a82cacf@sentry.io/231031').install();
+
 var app = module.exports = loopback();
 
 app.start = function() {
@@ -17,6 +20,9 @@ app.start = function() {
     }
   });
 };
+
+
+
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
