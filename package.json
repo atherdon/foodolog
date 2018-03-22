@@ -5,11 +5,16 @@
   "engines": {
     "node": ">=4"
   },
+
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
     "posttest": "npm run lint && nsp check"
+    //automigrate dependencies file
+    "migrate": "node server/automigrate.js"
+//    "import": "node server/001-import.js"
   },
+
   "dependencies": {
     "compression": "^1.0.3",
     "cors": "^2.5.2",
@@ -22,6 +27,7 @@
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"
   },
+
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-http": "^3.0.0",
@@ -29,10 +35,12 @@
     "eslint-config-loopback": "^8.0.0",
     "nsp": "^2.1.0"
   },
+
   "repository": {
     "type": "",
     "url": ""
   },
+
   "license": "UNLICENSED",
   "description": "reservations"
 }

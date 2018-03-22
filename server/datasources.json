@@ -25,6 +25,6 @@
     "name": "photos",
     "connector": "loopback-component-storage",
     "provider": "filesystem",
-    "root": "./server/files"
+    "root": "./server/files/photos"
   }
 }
