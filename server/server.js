@@ -23,6 +23,23 @@ app.start = function() {
 
 
 
+// Raven try catch
+
+try {
+//try config
+
+  }
+
+  // console.log(config);
+} catch (err) {
+  console.trace(err);
+  Raven.captureException(err);
+  process.exit(1); // fatal
+};
+
+
+
+
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
