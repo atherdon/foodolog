@@ -5,16 +5,15 @@
   "engines": {
     "node": ">=4"
   },
-
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "posttest": "npm run lint && nsp check"
-    //automigrate dependencies file
-    "migrate": "node server/automigrate.js"
-//    "import": "node server/001-import.js"
+    "posttest": "npm run lint && nsp check",
+    "migrate": "node bin/automigrate.js",
+    "import": "node bin/import.js",
+    "s": "npm run migrate && nodemon bin/import.js",
+    "a": "npm run migrate && nodemon bin/emport.js"
   },
-
   "dependencies": {
     "compression": "^1.0.3",
     "cors": "^2.5.2",
@@ -24,10 +23,10 @@
     "loopback-component-explorer": "^5.0.0",
     "loopback-component-storage": "^3.3.1",
     "loopback-connector-mongodb": "^3.4.1",
+    "raven": "^2.4.2",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"
   },
-
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-http": "^3.0.0",
@@ -35,12 +34,10 @@
     "eslint-config-loopback": "^8.0.0",
     "nsp": "^2.1.0"
   },
-
   "repository": {
     "type": "",
     "url": ""
   },
-
   "license": "UNLICENSED",
   "description": "reservations"
 }

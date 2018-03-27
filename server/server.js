@@ -28,8 +28,6 @@ app.start = function() {
 try {
 //try config
 
-  }
-
   // console.log(config);
 } catch (err) {
   console.trace(err);

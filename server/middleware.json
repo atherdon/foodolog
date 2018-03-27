@@ -45,6 +45,10 @@
     "loopback#urlNotFound": {}
   },
   "final:after": {
-    "strong-error-handler": {}
+    "raven#errorHandler": {},
+    "strong-error-handler": {
+      "debug": false,
+      "log": false
+    }
   }
 }
