@@ -2,15 +2,24 @@
 var path     = require('path');
 
 let app      = require(path.resolve(__dirname, '../server/server'));
-var database = app.datasources.searchDS;
+
+// We should really update that thing.
+var database = app.datasources.reservationDS;
 
 
 var lbTables = [
-  'Attribute',
-  'Department',
-  'Ingredient',
 
-  'Recipe'
+  'AccessToken',
+  'ACL',
+  
+  'RoleMapping', 
+  'Role',
+
+  'campground', 
+     
+  'reservation', 
+     
+  'customer',
 ];
 
 //creating loopback necessary tables if no exists

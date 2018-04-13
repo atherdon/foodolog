@@ -1,0 +1,1 @@
+we need this file in order to create a `files` folder after local checkout
